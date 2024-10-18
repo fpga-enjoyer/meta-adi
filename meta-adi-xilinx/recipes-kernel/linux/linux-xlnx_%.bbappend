@@ -6,7 +6,7 @@ PV = "${LINUX_VERSION}-${ADI_VERSION}+git${SRCPV}"
 KBRANCH = "main"
 # needed for offline build
 SRCREV = "${@ "dc4d9bb93a52833fb3950389e2b9a5be58767eb3" if bb.utils.to_boolean(d.getVar('BB_NO_NETWORK')) else d.getVar('AUTOREV')}"
-KERNELURI = "git://github.com/analogdevicesinc/linux.git;protocol=https"
+KERNELURI = "git://github.com/fpga-enjoyer/linux.git;protocol=https"
 
 # override kernel config file
 KBUILD_DEFCONFIG:zynq = "zynq_xcomm_adv7511_defconfig"
